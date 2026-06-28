@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completed Tasks | TaskFlow</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="completed-page">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <i class="fa-solid fa-list-check"></i> TaskFlow
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="completed.html">Completed</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="setting.html">Settings</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="mt-5 pt-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h1 class="fw-bold text-success">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Completed Tasks
+                </h1>
+
+                <p class="text-muted">
+                    Here are all the tasks you have successfully completed.
+                </p>
+
+            </div>
+
+            <!-- Statistics -->
+
+            <div class="row mb-5">
+
+                <div class="col-md-4">
+
+                    <div class="stats-card text-center">
+
+                        <h5>Total Completed</h5>
+
+                        <h2 id="completedCount">0</h2>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="stats-card text-center">
+
+                        <h5>Today's Completed</h5>
+
+                        <h2 id="todayCompleted">0</h2>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="stats-card text-center">
+
+                        <h5>Success Rate</h5>
+
+                        <h2 id="successRate">0%</h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Search -->
+
+            <div class="row mb-4">
+
+                <div class="col-md-8">
+
+                    <input type="text" class="form-control" id="completedSearch"
+                        placeholder="Search completed tasks...">
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <button class="btn btn-danger w-100" id="deleteAllCompleted">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        Delete All Completed
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Completed Tasks -->
+
+            <div class="row g-4" id="completedTaskList">
+
+                <!-- JavaScript will load completed tasks here -->
+
+            </div>
+
+            <!-- Empty State -->
+
+            <div id="noCompletedTasks" class="text-center py-5 d-none">
+
+                <i class="fa-solid fa-face-smile fa-5x text-success mb-4"></i>
+
+                <h3>No Completed Tasks Yet</h3>
+
+                <p class="text-muted">
+
+                    Complete a task from your dashboard and it will appear here.
+
+                </p>
+
+                <a href="dashboard.html" class="btn btn-primary">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back to Dashboard
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="text-center py-4 mt-5">
+
+        <p>
+
+            © 2026 TaskFlow | Completed Tasks
+
+        </p>
+
+    </footer>
+
+    <!-- Bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
